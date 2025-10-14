@@ -214,6 +214,23 @@ TODO
 
 TODO
 
+- Seeding mock data to database
+
+  - `Error: @prisma/client did not initialize yet.`
+
+    - This happened because of wrong import module. Use `@/app/generated/prisma` instead since it got generated when run `npx prisma migrate dev`. This is similar to when using `shadcn` that generate component file for you.
+
+    ```js
+    import { PrismaClient } from "@prisma/client"; //⛔️
+    import { PrismaClient } from "@/app/generated/prisma"; //✅
+    ```
+
+  - `Error [ERR_MODULE_NOT_FOUND]` when run `node prisma/seed.ts`
+    - use command `npx tsx` instead
+    ```bash
+    npx tsx prisma/seed.ts
+    ```
+
 ## <a name="missing">Missing Features</a>
 
 TODO
