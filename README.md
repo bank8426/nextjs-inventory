@@ -147,7 +147,9 @@ TODO
 - Next.js - React framework for full-stack web application development
 - React - JavaScript library
 - TypeScript - JavaScript superset for type safety
-- Clerk - Authentication & subscription billing integration Middleware with pre-built UI components and themes
+- Stack Auth – Modern authentication solution
+- Neon - Serverless PostgreSQL database service and easy to integrate with Stack Auth
+- Prisma – Type-safe database ORM with migrations
 - Tailwind CSS v4 - CSS framework
 - Shadcn UI - UI component library using primitives from Radix UI
 - Lucide React - Icon library for React
