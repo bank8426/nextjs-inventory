@@ -17,7 +17,12 @@ const DashboardPage = async () => {
       }),
       prisma.product.findMany({
         where: { userId },
-        select: { price: true, quantity: true, createdAt: true },
+        select: {
+          price: true,
+          quantity: true,
+          createdAt: true,
+          lowStockAt: true,
+        },
       }),
       prisma.product.findMany({
         where: { userId },
@@ -30,6 +35,25 @@ const DashboardPage = async () => {
     (sum, product) => sum + Number(product.price) * Number(product.quantity),
     0
   );
+
+  const inStockCount = allProducts.filter(
+    (product) => Number(product.quantity) > (product.lowStockAt || 5)
+  ).length;
+  const lowStockCount = allProducts.filter(
+    (product) =>
+      Number(product.quantity) > 0 &&
+      Number(product.quantity) <= (product.lowStockAt || 5)
+  ).length;
+  const outOfStockCount = allProducts.filter(
+    (product) => Number(product.quantity) === 0
+  ).length;
+
+  const inStockPercentage =
+    totalProducts > 0 ? Math.round((inStockCount / totalProducts) * 100) : 0;
+  const lowStockPercentage =
+    totalProducts > 0 ? Math.round((lowStockCount / totalProducts) * 100) : 0;
+  const outOfStockPercentage =
+    totalProducts > 0 ? Math.round((outOfStockCount / totalProducts) * 100) : 0;
 
   const now = new Date();
   const weeklyProductsData = [];
@@ -181,6 +205,54 @@ const DashboardPage = async () => {
                   </div>
                 );
               })}
+            </div>
+          </div>
+
+          {/* Efficiency */}
+          <div className="bg-white rounded-lg border border-gray-200 p-6">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-lg font-semibold text-gray-900">
+                Efficiency
+              </h2>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="relative w-48 h-48">
+                <div className="absolute inset-0 rounded-full border-8 border-gray-200"></div>
+                <div
+                  className="absolute inset-0 rounded-full border-8 border-purple-600"
+                  style={{
+                    clipPath:
+                      "polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%)",
+                  }}
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-gray-900">
+                      {inStockPercentage}%
+                    </div>
+                    <div className="text-sm text-gray-600">In Stock</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* inStockPercentage
+lowStockPercentage
+outOfStockPercentage */}
+            <div className="mt-6 space-y-2">
+              <div className="flex flex-col text-sm text-gray-600 gap-2">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-purple-600" />
+                  <span>In Stock ({inStockPercentage}%)</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-purple-200" />
+                  <span>Low Stock ({lowStockPercentage}%)</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-gray-200" />
+                  <span>Out of Stock ({outOfStockPercentage}%)</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
