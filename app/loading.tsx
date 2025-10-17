@@ -51,12 +51,12 @@ function LoadingSidebar() {
 
       <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-700">
         <div className="flex items-center justify-between">
-          <div className="flex-1 min-w-0">
+          <div>
+            <UserButton />
+          </div>
+          <div className="ml-3 flex-1 min-w-0">
             <Skeleton className="h-4 w-16 mb-1" />
             <Skeleton className="h-3 w-24" />
-          </div>
-          <div className="ml-3">
-            <UserButton />
           </div>
         </div>
       </div>

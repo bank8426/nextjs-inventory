@@ -15,13 +15,13 @@ const Sidebard = ({ currentPath = "/dashboard" }: { currentPath: string }) => {
       icon: Package,
     },
     {
-      name: "Add product",
+      name: "Add Product",
       href: "/add-product",
       icon: Plus,
     },
     {
-      name: "Setting",
-      href: "/setting",
+      name: "Settings",
+      href: "/settings",
       icon: Settings,
     },
   ];
@@ -35,7 +35,7 @@ const Sidebard = ({ currentPath = "/dashboard" }: { currentPath: string }) => {
       </div>
 
       <nav className="space-y-1">
-        <div className="text-xs font-semibold text-gray-400 uppercase">
+        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
           Inventory
         </div>
         {navigation.map((item, index) => {
