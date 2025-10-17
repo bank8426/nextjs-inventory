@@ -151,10 +151,9 @@ TODO
 - Neon - Serverless PostgreSQL database service and easy to integrate with Stack Auth
 - Prisma – Type-safe database ORM with migrations
 - Tailwind CSS v4 - CSS framework
-- Shadcn UI - UI component library using primitives from Radix UI
 - Recharts – Data visualization and charting library for React
 - Lucide React - Icon library for React
-- tw-animate-css - Collection of utility classes for Tailwind CSS animations
+- Zod - Schema validation library
 
 ## <a name="features">Features</a>
 
