@@ -1,3 +1,4 @@
+import Pagination from "@/components/pagination";
 import Sidebar from "@/components/sidebar";
 import { deleteProduct } from "@/lib/actions/product";
 import { getCurrentUser } from "@/lib/auth";
@@ -6,7 +7,7 @@ import prisma from "@/lib/prisma";
 const InventoryPage = async ({
   searchParams,
 }: {
-  searchParams: Promise<{ query?: string }>;
+  searchParams: Promise<{ query?: string; page?: string }>;
 }) => {
   const params = await searchParams;
   const query = (params.query ?? "").trim();
@@ -18,16 +19,20 @@ const InventoryPage = async ({
       ? { name: { contains: query, mode: "insensitive" } as const }
       : {}),
   };
-
+  const pageSize = 10;
+  const page = Math.max(1, Number(params.page ?? 1));
   const [allProducts, allProductsCount] = await Promise.all([
     prisma.product.findMany({
       where,
+      orderBy: { createdAt: "desc" },
+      skip: (page - 1) * pageSize,
+      take: pageSize,
     }),
     prisma.product.count({
       where,
     }),
   ]);
-  const pageSize = 10;
+
   const totalPage = Math.max(1, Math.ceil(allProductsCount / pageSize));
 
   return (
@@ -127,7 +132,15 @@ const InventoryPage = async ({
 
           {totalPage > 1 && (
             <div className="bg-white rounded-lg border border-gray-200 p-6">
-              {/* <Pagination /> */}
+              <Pagination
+                currentPage={page}
+                totalPage={totalPage}
+                baseUrl={"/inventory"}
+                searchParams={{
+                  query,
+                  pageSize: String(pageSize),
+                }}
+              />
             </div>
           )}
         </div>
