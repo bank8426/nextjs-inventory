@@ -18,11 +18,9 @@
 
 ## <a name="introduction">Introduction</a>
 
-TODO
+Inventory management App using Next.js, Neon, Stack Auth, Rechart, and TailwindCSS with authentication and interactive charts.
 
 ## <a name="note">⚠️ Note</a>
-
-TODO
 
 This project was implemented based on a tutorial video on YouTube from PedroTech [NextJS 15 FullStack Course - Build an Inventory Management Website](https://www.youtube.com/watch?v=L5CsIkO5xv4).
 
@@ -142,8 +140,6 @@ Click on each section to toggle the demo image.
 
 ## <a name="tech-stack">Tech Stack</a>
 
-TODO
-
 - Next.js - React framework for full-stack web application development
 - React - JavaScript library
 - TypeScript - JavaScript superset for type safety
@@ -157,7 +153,13 @@ TODO
 
 ## <a name="features">Features</a>
 
-TODO
+Modern Authentication - Secure user registration and login with Stack Auth
+Product Management - Complete CRUD operations for inventory items
+Search - Find products quickly with search functionality
+Pagination - Efficient data loading for large inventories
+Value Tracking - Monitor total inventory value and financial metrics
+Visual Analytics - Interactive charts showing inventory trends
+Server Actions - Form handling with Next.js Server Actions
 
 ## <a name="additional">Additional Feature</a>
 
@@ -165,7 +167,6 @@ TODO
 
 ## <a name="quick-start">Quick Start</a>
 
-TODO
 Follow these steps to set up the project locally on your machine.
 
 ### Prerequisites
@@ -195,7 +196,15 @@ npm install
 2. Replace the placeholder values with your actual credentials
 
 ```env
+# create new database https://neon.com/ and enable Auth feature
 
+# Neon Auth environment variables for Next.js
+NEXT_PUBLIC_STACK_PROJECT_ID=
+NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY=
+STACK_SECRET_SERVER_KEY=
+
+# Database owner connection string
+DATABASE_URL=
 ```
 
 ### Running the Project
