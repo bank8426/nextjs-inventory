@@ -29,17 +29,10 @@ This project was implemented based on a tutorial video on YouTube from PedroTech
 TODO
 Click on each section to toggle the demo image.
 
-<!--
 <details>
   <summary>
     Authentication
   </summary>
-  <b>Sign up</b>
-  <div>
-    <a href="">
-        <img src="public/readme/sign-up.gif" alt="Sign up" />
-    </a>
-  </div>
   <b>Sign in</b>
   <div>
     <a href="">
@@ -52,76 +45,36 @@ Click on each section to toggle the demo image.
     Authenticated User
   </summary>
   <div>
-    <details>
-      <summary>
-        Dashboard page
-      </summary>
-      <b>Create new board</b>
-      <div>
-        <a href="">
-          <img src="public/readme/create-board.gif" alt="Create board" />
-        </a>
-      </div>
-      <b>Filter and search board (Edit board created_at to demo date filtering)</b>
-      <div>
-        <a href="">
-          <img src="public/readme/filter-board.gif" alt="Filter board" />
-        </a>
-      </div>
-      <b>Boards view setting</b>
-      <div>
-        <a href="">
-          <img src="public/readme/dashboard-view.gif" alt="Dashboard view setting" />
-        </a>
-      </div>
-      <b>Upgrade plan</b>
-      <div>
-        <a href="">
-          <img src="public/readme/upgrade.gif" alt="Upgrade" />
-        </a>
-      </div>
-    </details>
-    <details>
-      <summary>
-        Board page
-      </summary>
-      <b>Edit board</b>
-      <div>
-        <a href="">
-          <img src="public/readme/edit-board.gif" alt="Edit board" />
-        </a>
-      </div>
-      <b>Add/Edit Column</b>
-      <div>
-        <a href="">
-          <img src="public/readme/add-edit-column.gif" alt="Add or edit column" />
-        </a>
-      </div>
-      <b>Add task</b>
-      <div>
-        <a href="">
-          <img src="public/readme/add-task.gif" alt="Add task" />
-        </a>
-      </div>
-      <b>Drag and drop task to reorder task in same column</b>
-      <div>
-        <a href="">
-          <img src="public/readme/drag-and-drop-same-column.gif" alt="Drag and drop to reorder task in same column" />
-        </a>
-      </div>
-      <b>Drag and drop task to change column</b>
-      <div>
-        <a href="">
-          <img src="public/readme/drag-and-drop-different-column.gif" alt="Drag and drop to change column" />
-        </a>
-      </div>
-      <b>Filter task</b>
-      <div>
-        <a href="">
-          <img src="public/readme/filter-task.gif" alt="Filter task" />
-        </a>
-      </div>
-    </details>
+    <b>Dashboard</b>
+    <div>
+      <a href="">
+        <img src="public/readme/create-board.gif" alt="Create board" />
+      </a>
+    </div>
+    <b>Inventory</b>
+    <div>
+      <a href="">
+        <img src="public/readme/filter-board.gif" alt="Filter board" />
+      </a>
+    </div>
+    <b>Add Product</b>
+    <div>
+      <a href="">
+        <img src="public/readme/dashboard-view.gif" alt="Dashboard view setting" />
+      </a>
+    </div>
+    <b>Setting</b>
+    <div>
+      <a href="">
+        <img src="public/readme/upgrade.gif" alt="Upgrade" />
+      </a>
+    </div>
+    <b>Sign out</b>
+    <div>
+      <a href="">
+        <img src="public/readme/upgrade.gif" alt="Upgrade" />
+      </a>
+    </div>
   </div>
 </details>
 <details>
@@ -136,7 +89,7 @@ Click on each section to toggle the demo image.
       </a>
     </div>
   </div>
-</details> -->
+</details>
 
 ## <a name="tech-stack">Tech Stack</a>
 
@@ -160,10 +113,6 @@ Pagination - Efficient data loading for large inventories
 Value Tracking - Monitor total inventory value and financial metrics
 Visual Analytics - Interactive charts showing inventory trends
 Server Actions - Form handling with Next.js Server Actions
-
-## <a name="additional">Additional Feature</a>
-
-TODO
 
 ## <a name="quick-start">Quick Start</a>
 
@@ -219,6 +168,8 @@ Your server will run on [http://localhost:3000](http://localhost:3000/)
 
 TODO
 
+- Stack Auth
+
 ## <a name="implementation-note">Implementation Notes</a>
 
 TODO
@@ -242,8 +193,6 @@ TODO
 
 ## <a name="missing">Missing Features</a>
 
-TODO
+Inventory
 
-## <a name="bugs">Known Bugs</a>
-
-TODO
+- Batch delete
