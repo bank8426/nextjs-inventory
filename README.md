@@ -9,12 +9,10 @@
 3. [Demo](#demo)
 4. [Tech Stack](#tech-stack)
 5. [Features](#features)
-6. [Additional Feature](#additional)
-7. [Quick Start](#quick-start)
-8. [What I learned](#learn)
-9. [Implementation Notes](#implementation-notes)
-10. [Missing Features](#missing)
-11. [Known Bugs](#bugs)
+6. [Quick Start](#quick-start)
+7. [What I learned](#learn)
+8. [Implementation Notes](#implementation-notes)
+9. [Missing Features](#missing)
 
 ## <a name="introduction">Introduction</a>
 
@@ -26,7 +24,6 @@ This project was implemented based on a tutorial video on YouTube from PedroTech
 
 ## <a name="demo">Demo</a>
 
-TODO
 Click on each section to toggle the demo image.
 
 <details>
@@ -48,44 +45,37 @@ Click on each section to toggle the demo image.
     <b>Dashboard</b>
     <div>
       <a href="">
-        <img src="public/readme/create-board.gif" alt="Create board" />
+        <img src="public/readme/dashboard.gif" alt="Dashboard" />
       </a>
     </div>
     <b>Inventory</b>
     <div>
       <a href="">
-        <img src="public/readme/filter-board.gif" alt="Filter board" />
+        <img src="public/readme/inventory.gif" alt="Inventory" />
       </a>
     </div>
     <b>Add Product</b>
     <div>
       <a href="">
-        <img src="public/readme/dashboard-view.gif" alt="Dashboard view setting" />
+        <img src="public/readme/add-product.gif" alt="Add Product" />
+      </a>
+    </div>
+    <b>Delete Product</b>
+    <div>
+      <a href="">
+        <img src="public/readme/delete-product.gif" alt="Delete Product" />
       </a>
     </div>
     <b>Setting</b>
     <div>
       <a href="">
-        <img src="public/readme/upgrade.gif" alt="Upgrade" />
+        <img src="public/readme/setting.gif" alt="Setting" />
       </a>
     </div>
     <b>Sign out</b>
     <div>
       <a href="">
-        <img src="public/readme/upgrade.gif" alt="Upgrade" />
-      </a>
-    </div>
-  </div>
-</details>
-<details>
-  <summary>
-    Unauthenticated User
-  </summary>
-  <div>
-    <b>Home page</b>
-    <div>
-      <a href="">
-        <img src="public/readme/home.gif" alt="Home" />
+        <img src="public/readme/sign-out.gif" alt="Sign out" />
       </a>
     </div>
   </div>
@@ -195,4 +185,9 @@ TODO
 
 Inventory
 
-- Batch delete
+- Batch delete products
+
+Toast
+
+- Create Product
+- Delete product
