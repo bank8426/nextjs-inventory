@@ -1,6 +1,4 @@
-⚠️In progress...
-
-<h3 align="center">Trello Clone</h3>
+<h3 align="center">Inventory Management App</h3>
 
 ## Table of Contents
 
@@ -118,7 +116,7 @@ Follow these steps to set up the project locally on your machine.
 
 ```bash
 git clone https://github.com/bank8426/nextjs-inventory.git
-cd nextjs-trello-clone
+cd nextjs-inventory
 ```
 
 ### Installation
@@ -156,19 +154,15 @@ Your server will run on [http://localhost:3000](http://localhost:3000/)
 
 ## <a name="learn">What I learned</a>
 
-TODO
-
-- Stack Auth
+- Stack Auth, similar to Clerk, that works as middleware for authentication and authorization, and also provides components related to that for you. To use it, you need to create an account and create a new project at [Stack Auth](https://stack.dev/) or just go to [neon.com](https://neon.com) and enable the Auth feature with Stack Auth integration, which will also give you the necessary environment variables without creating an account at Stack Auth. In the free plan, you can have 10,000 users and 1 dashboard admin, which is enough, and you can have an unlimited number of projects.
 
 ## <a name="implementation-note">Implementation Notes</a>
 
-TODO
-
-- Seeding mock data to database
+- Seeding mock data to the database
 
   - `Error: @prisma/client did not initialize yet.`
 
-    - This happened because of wrong import module. Use `@/app/generated/prisma` instead since it got generated when run `npx prisma migrate dev`. This is similar to when using `shadcn` that generate component file for you.
+    - This happened because of the wrong import module. Use `@/app/generated/prisma` instead, as it was generated when running `npx prisma migrate dev`. This is similar to when using `shadcn`, which generates a component file for you.
 
     ```js
     import { PrismaClient } from "@prisma/client"; //⛔️
@@ -176,7 +170,7 @@ TODO
     ```
 
   - `Error [ERR_MODULE_NOT_FOUND]` when run `node prisma/seed.ts`
-    - use command `npx tsx` instead
+    - Use the command `npx tsx` instead
     ```bash
     npx tsx prisma/seed.ts
     ```
